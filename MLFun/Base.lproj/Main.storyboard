@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RbQ-nS-WUt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--What is this?-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MLFun" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icecream" translatesAutoresizingMaskIntoConstraints="NO" id="43Q-nf-Lcs">
+                                <rect key="frame" x="10" y="74" width="355" height="429"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40.6%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVi-ac-s0h">
+                                <rect key="frame" x="107.5" y="584.5" width="161" height="62.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62.5" id="iVV-NM-hPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdj dsjkhfse ashefhe jasfhuejh hseh " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="7fO-Sc-etS">
+                                <rect key="frame" x="10" y="513" width="355" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="gCv-zU-aPD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7fO-Sc-etS" firstAttribute="top" secondItem="43Q-nf-Lcs" secondAttribute="bottom" constant="10" id="5sj-d4-fbw"/>
+                            <constraint firstItem="43Q-nf-Lcs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="UmW-JB-l2O"/>
+                            <constraint firstItem="hVi-ac-s0h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WNJ-pI-MFI"/>
+                            <constraint firstItem="43Q-nf-Lcs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ZbN-a2-qJI"/>
+                            <constraint firstItem="7fO-Sc-etS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="cXm-8P-MX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hVi-ac-s0h" secondAttribute="bottom" constant="20" id="kHv-Zi-iCV"/>
+                            <constraint firstItem="hVi-ac-s0h" firstAttribute="top" secondItem="7fO-Sc-etS" secondAttribute="bottom" constant="18.5" id="mRb-lY-pqP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7fO-Sc-etS" secondAttribute="trailing" constant="10" id="pO3-vj-FW2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="43Q-nf-Lcs" secondAttribute="trailing" constant="10" id="pkf-Tj-jj0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="What is this?" id="jvL-vV-3zQ">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="camera" id="q7r-HV-LaV">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="BYZ-38-t0r" id="6YU-3c-ekE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="organize" id="Q3p-56-2f4">
+                                <connections>
+                                    <action selector="photosTapped:" destination="BYZ-38-t0r" id="fsD-6q-1e7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="confidenceLabel" destination="hVi-ac-s0h" id="6x8-fn-wNs"/>
+                        <outlet property="descriptionLabel" destination="7fO-Sc-etS" id="zIT-xx-rgb"/>
+                        <outlet property="imageView" destination="43Q-nf-Lcs" id="hzt-42-dmM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1Sw-P4-yUA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RbQ-nS-WUt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mXu-1B-ZsQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8i5-JR-cNN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5q1-TI-RbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247" y="117"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icecream" width="310" height="162"/>
+    </resources>
+</document>
